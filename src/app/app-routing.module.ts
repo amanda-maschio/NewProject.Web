@@ -7,7 +7,7 @@ import { NotFoundComponent } from './pages/error/not-found/not-found.component';
 import { InternalServerErrorComponent } from './pages/error/internal-server-error/internal-server-error.component';
 import { UnauthorizedComponent } from './pages/error/unauthorized/unauthorized.component';
 import { ConectionErrorComponent } from './pages/error/conection-error/conection-error.component';
-import { AuthorizeGuard } from './services/authorize-guard';
+import { AuthorizeGuard } from './services/authorization/authorize-guard';
 
 const routes: Routes = [
   //canActivate: [AuthorizeGuard]: Responsável por dizer se o usuário logado vai ter acesso ou não;

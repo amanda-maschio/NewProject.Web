@@ -30,8 +30,8 @@ import { MomentDateAdapter } from '@angular/material-moment-adapter';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { LoginService } from './services/login.service';
-import { AuthorizeGuard } from './services/authorize-guard';
-import { InterceptorModule } from './services/interceptor-module';
+import { AuthorizeGuard } from './services/authorization/authorize-guard';
+import { InterceptorModule } from './services/authorization/interceptor-module';
 import { ExampleComponent } from './pages/example/example.component';
 
 registerLocaleData(localePt, 'pt');

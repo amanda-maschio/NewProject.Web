@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { CanActivate, Router } from "@angular/router";
 import { Observable } from "rxjs";
-import { LoginService } from "./login.service";
+import { LoginService } from "../login.service";
 
 @Injectable()
 export class AuthorizeGuard implements CanActivate {
@@ -14,7 +14,7 @@ export class AuthorizeGuard implements CanActivate {
   public canActivate(): Observable<boolean> {
     return new Observable(observer => {
       let validLogin = this.loginService.validLogin();
-      //Se o token n é valido redireciona pro Login.
+      //Se o token não é valido, redireciona para página de Login.
       if (!validLogin) {
         this.router.navigateByUrl('/login');
 

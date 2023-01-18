@@ -7,7 +7,7 @@ export class Interceptor implements HttpInterceptor {
  intercept( request: HttpRequest<any>, next: HttpHandler ): Observable<HttpEvent<any>> {
 
   let token = localStorage.getItem('token');
-  //Manda o token pro Back
+  //Manda o token pro Backend
   request = request.clone({
    setHeaders: {
      Authorization: 'Bearer ' + token
