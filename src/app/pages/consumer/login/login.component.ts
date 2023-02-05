@@ -47,7 +47,7 @@ export class LoginConsumerComponent implements OnInit {
     const email = this.loginForm.controls.email.value;
     const password = this.loginForm.controls.password.value;
 
-    this.loginService.login(email, password).subscribe((data) => {
+    this.loginService.login(email, password, "consumer").subscribe((data) => {
       console.log(data)
       if (data.status == 400) {
 
