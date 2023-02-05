@@ -7,13 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  public name!: string;
-
   constructor() { 
   }
 
   ngOnInit(): void {
-    this.name = localStorage.getItem('name')!.split(" ")[0];
   }
 
 }

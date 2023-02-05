@@ -12108,6 +12108,18 @@ a:focus {
   background-size: cover;
 }
 
+.bg-login-consumer-image {
+  background: url("../../../assets/images/login-consumer.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-login-company-image {
+  background: url("../../../assets/images/login-company.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+
 .bg-register-image {
   background: url("https://source.unsplash.com/Mv9hjnEUHR4/600x800");
   background-position: center;
@@ -12676,10 +12688,14 @@ body.sidebar-toggled footer.sticky-footer {
   box-shadow: 0 0.375rem 0.75rem rgb(140 152 164 / 8%);
 }
 
-.mat-tab-header{
+.mat-tab-header {
   margin-bottom: 2em !important;
 }
 
-:host ::ng-deep.mat-spinner{
+:host ::ng-deep.mat-spinner {
   margin-right: 0.2rem !important;
+}
+
+.invalid-input {
+  border-color: red !important;
 }

@@ -9,7 +9,8 @@ import { MaterialModule } from './shared/material/material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
-import { LoginComponent } from './pages/login/login.component';
+import { LoginCompanyComponent } from './pages/company/login/login.component';
+import { LoginConsumerComponent } from './pages/consumer/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './pages/error/not-found/not-found.component';
 import { InternalServerErrorComponent } from './pages/error/internal-server-error/internal-server-error.component';
@@ -30,9 +31,8 @@ import { MomentDateAdapter } from '@angular/material-moment-adapter';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { LoginService } from './services/login.service';
-import { AuthorizeGuard } from './services/authorization/authorize-guard';
-import { InterceptorModule } from './services/authorization/interceptor-module';
 import { ExampleComponent } from './pages/example/example.component';
+import { LoginSettingsService } from './services/login-settings.service';
 
 registerLocaleData(localePt, 'pt');
 
@@ -51,14 +51,15 @@ export const MY_FORMATS = {
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     HomeComponent,
     NotFoundComponent,
     InternalServerErrorComponent,
     UnauthorizedComponent,
     ConectionErrorComponent,
     SnackBarComponent,
-    ExampleComponent
+    ExampleComponent,
+    LoginConsumerComponent,
+    LoginCompanyComponent
   ],
   imports: [
     BrowserModule,
@@ -76,7 +77,6 @@ export const MY_FORMATS = {
     MatSortModule,
     MatSidenavModule,
     NgxSkeletonLoaderModule,
-    InterceptorModule,
     MaterialModule
   ],
   providers: [
@@ -92,7 +92,7 @@ export const MY_FORMATS = {
     { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
     { provide: MAT_DATE_FORMATS, useValue: MY_FORMATS },
     LoginService,
-    AuthorizeGuard
+    LoginSettingsService
 
   ],
   bootstrap: [AppComponent],

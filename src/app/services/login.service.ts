@@ -1,56 +1,35 @@
-import { EventEmitter, Injectable, Output } from '@angular/core';
-import { Router } from '@angular/router';
-import { JwtHelperService } from "@auth0/angular-jwt";
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { API_URL } from '../../config';
 
-@Injectable()
+const baseURL = `${API_URL}public`
+
+@Injectable({
+    providedIn: 'root'
+})
+
 export class LoginService {
 
-  @Output() loginChanged = new EventEmitter<any>();
+    headers = {
+        headers: new HttpHeaders({
+            "Content-Type": "application/x-www-form-urlencoded",
+            Accept: "aplication/json"
+        })
+    };
 
-  private loggedUser!: any;
-  private jwtHelper = new JwtHelperService();
+    constructor(private http: HttpClient) { }
 
-  constructor(
-    private router: Router
-  ) {
-    this.loadDataFromToken();
-  }
+    login(email: string, password: string): Observable<any> {
+        const creds = new HttpParams()
+            .set('email', email)
+            .set('password', password)
 
-  private loadDataFromToken() {
-    let token = localStorage.getItem('token');
-    if (!token)
-      return false;
+        return this.http.post<any>(
+            `${baseURL}/login`,
+            creds.toString(),
+            this.headers
+        );
+    }
 
-    let data = this.jwtHelper.decodeToken(token);
-    this.loggedUser;
-    this.loggedUser.id = data.id;
-    this.loggedUser.email = data.email;
-    this.loginChanged.emit(this.loggedUser);
-
-    return data;
-  }
-
-  public getLoggedUser(): any {
-    return this.loggedUser;
-  }
-
-  public setLogin(token: string): void {
-    localStorage.setItem('token', token);
-    this.loginChanged.emit(this.loggedUser);
-  }
-
-  public logout() {
-    localStorage.removeItem('token');
-    this.loginChanged.emit(this.loggedUser);
-    this.router.navigateByUrl('/login');
-  }
-
-  public validLogin(): boolean {
-    let token = localStorage.getItem('token');
-    if (!token)
-      return false;
-
-    let tokenExpired = this.jwtHelper.isTokenExpired(token);
-    return !tokenExpired;
-  }
 }
