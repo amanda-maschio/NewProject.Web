@@ -9,12 +9,6 @@ import { MaterialModule } from './shared/material/material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
-import { LoginCompanyComponent } from './pages/company/login/login.component';
-import { LoginConsumerComponent } from './pages/consumer/login/login.component';
-import { HomeComponent } from './pages/home/home.component';
-import { NotFoundComponent } from './pages/error/not-found/not-found.component';
-import { InternalServerErrorComponent } from './pages/error/internal-server-error/internal-server-error.component';
-import { UnauthorizedComponent } from './pages/error/unauthorized/unauthorized.component';
 import { SnackBarComponent } from './pages/snackbar/snack-bar.component';
 import { NgChartsModule } from 'ng2-charts';
 import { NgxMaskModule } from 'ngx-mask'
@@ -23,16 +17,14 @@ import { MatPaginatorIntl } from '@angular/material/paginator';
 import { getPortuguesePaginatorIntl } from './utils/custom-mat-paginator-intl';
 import { NgxLoadingButtonsModule } from 'ngx-loading-buttons';
 import { LOCALE_ID, DEFAULT_CURRENCY_CODE } from '@angular/core';
-import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { MatSortModule } from '@angular/material/sort';
-import { ConectionErrorComponent } from './pages/error/conection-error/conection-error.component';
 import { MomentDateAdapter } from '@angular/material-moment-adapter';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { LoginService } from './services/login.service';
-import { ExampleComponent } from './pages/example/example.component';
 import { LoginSettingsService } from './services/login-settings.service';
+import localePt from '@angular/common/locales/pt';
 
 registerLocaleData(localePt, 'pt');
 
@@ -51,15 +43,7 @@ export const MY_FORMATS = {
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    NotFoundComponent,
-    InternalServerErrorComponent,
-    UnauthorizedComponent,
-    ConectionErrorComponent,
-    SnackBarComponent,
-    ExampleComponent,
-    LoginConsumerComponent,
-    LoginCompanyComponent
+    SnackBarComponent
   ],
   imports: [
     BrowserModule,

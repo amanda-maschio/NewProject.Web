@@ -39,16 +39,16 @@ export class ErrorHandlerService {
     }
 
     private handle0Error = (error: HttpErrorResponse) => {
-        this.router.navigate(['/', 'conection-error']);
+        this.router.navigate(['/', 'public/error/conection-error']);
     }
 
     private handle404Error = (error: HttpErrorResponse) => {
         localStorage.clear();
-        this.router.navigate(['/', 'not-found-404']);
+        this.router.navigate(['/', 'public/error/not-found-404']);
     }
 
     private handle401Error = (error: HttpErrorResponse) => {
-        this.router.navigate(['/', 'unauthorized-error-401']);
+        this.router.navigate(['/', 'public/error/unauthorized-error-401']);
     }
 
     private handle409Error = (error: HttpErrorResponse) => {

@@ -27,13 +27,20 @@
                                                placeholder="Insira seu e-mail">
                                     </div>
 
-                                    <div class="form-group">
-                                        <input type="password"
-                                               class="form-control form-control-user"
-                                               [ngClass]="loginForm.controls.password.touched && loginForm.controls.password.invalid ? 'invalid-input' : ''"
+                                    <div class="input-group mb-3">
+                                        <input [type]="hide ? 'password' : 'text'"
+                                               class="form-control form-control-user input-password"
                                                id="password"
                                                formControlName="password" 
                                                placeholder="Insira sua senha">
+
+                                               <span class="input-group-text eye-icon">
+                                                    <i [class]="hide ? 'far fa-eye-slash' : 'far fa-eye'" 
+                                                    id="togglePassword" 
+                                                    style="cursor: pointer" 
+                                                    (click)="showHiddePassword()">
+                                                    </i>
+                                               </span>
                                     </div>
 
                                     <button class="btn btn-primary btn-user btn-block" (click)="login()" [disabled]="loading">
@@ -67,8 +74,9 @@
                                 <div class="text-center">
                                     <a class="small">Esqueci minha Senha</a>
                                 </div>
+                                
                                 <div class="text-center">
-                                    <a class="small">Criar uma Conta</a>
+                                    <a class="small" href="/consumer/register">Criar uma Conta</a>
                                 </div>
 
                             </div>

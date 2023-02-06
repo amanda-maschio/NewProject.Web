@@ -14,6 +14,7 @@ import { MessageHandlerService } from './../../../services/message-handler.servi
 export class LoginConsumerComponent implements OnInit {
 
   public loading: Boolean = false;
+  public hide: Boolean = true;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -48,7 +49,7 @@ export class LoginConsumerComponent implements OnInit {
     const password = this.loginForm.controls.password.value;
 
     this.loginService.login(email, password, "consumer").subscribe((data) => {
-      console.log(data)
+
       if (data.status == 400) {
 
         this.messageHandler.showMessage(data.message, "danger-snackbar");
@@ -71,6 +72,10 @@ export class LoginConsumerComponent implements OnInit {
       this.errorHandler.handleError(error);
       this.loading = false;
     });
+  }
+
+  public showHiddePassword(): void {
+    this.hide = !this.hide;
   }
 
 }

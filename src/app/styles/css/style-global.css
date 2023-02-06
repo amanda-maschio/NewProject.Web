@@ -12120,6 +12120,12 @@ a:focus {
   background-size: cover;
 }
 
+.bg-register-consumer-image {
+  background: url("../../../assets/images/register-consumer.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+
 .bg-register-image {
   background: url("https://source.unsplash.com/Mv9hjnEUHR4/600x800");
   background-position: center;
@@ -12698,4 +12704,14 @@ body.sidebar-toggled footer.sticky-footer {
 
 .invalid-input {
   border-color: red !important;
+}
+
+.c-pointer {
+  cursor: pointer !important;
+}
+
+.invalid-feedback-bs {
+  font-size: 11px;
+  margin-left: 1rem;
+  color: red;
 }

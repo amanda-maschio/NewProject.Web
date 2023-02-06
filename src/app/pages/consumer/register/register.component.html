@@ -1,0 +1,140 @@
+<div class="container">
+
+    <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card-body p-0">
+
+            <div class="row">
+                <div class="col-lg-5 d-none d-lg-block bg-register-consumer-image"></div>
+                <div class="col-lg-7">
+                    <div class="p-5">
+                        <div class="text-center">
+                            <h1 class="h4 text-gray-900 mb-4">Criar uma Conta</h1>
+                        </div>
+
+                        <form class="user" [formGroup]="registerConsumerForm">
+                            <div class="form-group row">
+                               
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <input type="text"
+                                           class="form-control form-control-user"
+                                           [ngClass]="registerConsumerForm.controls.first_name.touched && registerConsumerForm.controls.first_name.invalid ? 'invalid-input' : ''"
+                                           id="first_name"
+                                           formControlName="first_name"
+                                           placeholder="Nome *"
+                                           maxlength="128">
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <input type="text"
+                                           class="form-control form-control-user"
+                                           [ngClass]="registerConsumerForm.controls.last_name.touched && registerConsumerForm.controls.last_name.invalid ? 'invalid-input' : ''"
+                                           id="last_name"
+                                           formControlName="last_name"
+                                           placeholder="Sobrenome *"
+                                           maxlength="128">
+                                </div>
+
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <input type="text"
+                                           class="form-control form-control-user"
+                                           [ngClass]="registerConsumerForm.controls.cpf.touched && registerConsumerForm.controls.cpf.invalid ? 'invalid-input' : ''"
+                                           id="cpf"
+                                           formControlName="cpf"
+                                           placeholder="CPF *"
+                                           maxlength="14"
+                                           mask="000.000.000-09">
+                                           <span class="invalid-feedback-bs" 
+                                                 *ngIf="registerConsumerForm.controls.cpf.touched && registerConsumerForm.controls.cpf.invalid">
+                                                 O CPF é Inválido.
+                                           </span>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <input type="text"
+                                           class="form-control form-control-user"
+                                           [ngClass]="registerConsumerForm.controls.phone.touched && registerConsumerForm.controls.phone.invalid ? 'invalid-input' : ''"
+                                           id="phone"
+                                           formControlName="phone"
+                                           placeholder="Telefone *"
+                                           maxlength="11"
+                                           mask="00000000009">
+                                           <span class="invalid-feedback-bs" 
+                                                 *ngIf="registerConsumerForm.controls.phone.touched && registerConsumerForm.controls.phone.invalid">
+                                                  O Telefone é Inválido.
+                                           </span>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email"
+                                       class="form-control form-control-user"
+                                       [ngClass]="registerConsumerForm.controls.user_email.touched && registerConsumerForm.controls.user_email.invalid ? 'invalid-input' : ''"
+                                       id="user_email"
+                                       formControlName="user_email"
+                                       placeholder="Endereço de e-mail *"
+                                       maxlength="254">
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0 input-group">
+                                    <input [type]="hidePassword ? 'password' : 'text'"
+                                           class="form-control form-control-user br-none"
+                                           [ngClass]="registerConsumerForm.controls.password.touched && registerConsumerForm.controls.password.invalid ? 'invalid-input' : ''"
+                                           id="password"
+                                           formControlName="password"
+                                           placeholder="Senha *"
+                                           maxlength="128">
+
+                                           <span class="input-group-text eye-icon bl-none">
+                                                <i [class]="hidePassword ? 'far fa-eye-slash' : 'far fa-eye'"
+                                                    class="c-pointer"
+                                                    id="togglePassword"
+                                                    (click)="showHiddePassword()">
+                                                </i>
+                                           </span>
+                                </div>
+
+                                <div class="col-sm-6 input-group">
+                                    <input [type]="hideRepeatPassword ? 'password' : 'text'"
+                                           class="form-control form-control-user br-none"
+                                           [ngClass]="registerConsumerForm.controls.repeat_password.touched && registerConsumerForm.controls.repeat_password.invalid ? 'invalid-input' : ''"
+                                           id="repeat_password"
+                                           formControlName="repeat_password"
+                                           placeholder="Repetir a Senha *"
+                                           maxlength="128">
+
+                                           <span class="input-group-text eye-icon bl-none">
+                                                <i [class]="hideRepeatPassword ? 'far fa-eye-slash' : 'far fa-eye'"
+                                                    class="c-pointer"
+                                                    id="togglePassword"
+                                                    (click)="showHiddeRepeatPassword()">
+                                                </i>
+                                            </span>
+                                </div>
+                            </div>
+
+                            <a (click)="registerUser()" class="btn btn-primary btn-user btn-block"> Criar Conta </a>
+        
+                        </form>
+
+                        <hr>
+
+                        <div class="text-center">
+                            <a class="small">Esqueceu a senha?</a>
+                        </div>
+
+                        <div class="text-center">
+                            <span class="small">Já possui uma conta?&nbsp;</span>
+                            <a class="small" href="/consumer/login">Faça o Login!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
