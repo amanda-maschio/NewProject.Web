@@ -12138,6 +12138,18 @@ a:focus {
   background-size: cover;
 }
 
+.bg-consumer-password-image {
+  background: url("../../../assets/images/consumer-forgot-password.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-company-password-image {
+  background: url("../../../assets/images/company-forgot-password.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+
 form.user .custom-checkbox.small label {
   line-height: 1.5rem;
 }

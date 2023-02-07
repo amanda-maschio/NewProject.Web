@@ -22,6 +22,7 @@ import { LoginCompanyComponent } from './login/login.component';
 import localePt from '@angular/common/locales/pt';
 import { LoginSettingsService } from './../../services/login-settings.service';
 import { LoginService } from './../../services/login.service';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 registerLocaleData(localePt, 'pt');
 
@@ -29,7 +30,8 @@ registerLocaleData(localePt, 'pt');
     declarations: [
         CompanyComponent,
         LoginCompanyComponent,
-        HomeCompanyComponent
+        HomeCompanyComponent,
+        ForgotPasswordComponent
     ],
     imports: [
         CommonModule,

@@ -20,6 +20,7 @@ import { ConsumerComponent } from './consumer.component';
 import { HomeConsumerComponent } from './home/home.component';
 import { LoginConsumerComponent } from './login/login.component';
 import { RegisterConsumerComponent } from './register/register.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 import localePt from '@angular/common/locales/pt';
 import { LoginSettingsService } from './../../services/login-settings.service';
@@ -32,7 +33,8 @@ registerLocaleData(localePt, 'pt');
         ConsumerComponent,
         LoginConsumerComponent,
         RegisterConsumerComponent,
-        HomeConsumerComponent
+        HomeConsumerComponent,
+        ForgotPasswordComponent
     ],
     imports: [
         CommonModule,
