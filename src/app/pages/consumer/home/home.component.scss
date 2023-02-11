@@ -1,0 +1,37 @@
+.badge {
+    transform: scale(0.7);
+    transform-origin: top right;
+    right: 0.5rem;
+    top: -10px;
+    border-radius: 0.8rem;
+}
+
+.badge-sell-item {
+    border-radius: 0.25rem;
+}
+
+.topbar-divider {
+    width: 0;
+    border-right: 1px solid #e3e6f0;
+    height: calc(4.375rem - 2rem);
+    margin: auto 1rem;
+}
+
+.img-profile {
+    height: 2rem;
+    width: 2rem;
+}
+
+.nav-item {
+    list-style: none;
+}
+
+.down-icon {
+    font-size: 12px;
+}
+
+@media (min-width: 576px) {
+    .d-sm-block {
+        display: block !important;
+    }
+}
