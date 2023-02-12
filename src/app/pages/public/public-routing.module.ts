@@ -6,6 +6,7 @@ import { InternalServerErrorComponent } from './error/internal-server-error/inte
 import { NotFoundComponent } from './error/not-found/not-found.component';
 import { UnauthorizedComponent } from './error/unauthorized/unauthorized.component';
 import { HomeComponent } from './home/home.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -13,7 +14,8 @@ const routes: Routes = [
     { path: 'error/internal-server-error-500', component: InternalServerErrorComponent },
     { path: 'error/unauthorized-error-401', component: UnauthorizedComponent },
     { path: 'error/conection-error', component: ConectionErrorComponent },
-    { path: 'error/in-development', component: InDevelopmentComponent }
+    { path: 'error/in-development', component: InDevelopmentComponent },
+    { path: 'about-us', component: AboutUsComponent }
 ];
 
 @NgModule({

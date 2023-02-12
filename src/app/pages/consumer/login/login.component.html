@@ -43,24 +43,27 @@
                                                </span>
                                     </div>
 
-                                    <button class="btn btn-primary btn-user btn-block" (click)="login()" [disabled]="loading">
-                                        <div class="d-flex" style="justify-content: center;align-content: center;">
-                                            <div class="spinner-grow spinner-grow-sm me-1" role="status" *ngIf="loading"></div>
-                                            <div>Entrar</div>
-                                        </div> 
+                                    <button class="btn btn-primary btn-user btn-block"
+                                            id="btn-login"
+                                            (click)="login()"
+                                            [disabled]="loading">
+                                            <div class="d-flex" style="justify-content: center;align-content: center;">
+                                                <div class="spinner-grow spinner-grow-sm me-1" role="status" *ngIf="loading"></div>
+                                                <div>Entrar</div>
+                                            </div> 
                                     </button>
                                     
                                     <hr>
                                     
-                                    <a class="btn btn-google btn-user btn-block">
+                                    <button class="btn btn-google btn-user btn-block">
                                         <i class="fab fa-google fa-fw"></i>
                                         Continuar com Google
-                                    </a>
+                                    </button>
 
-                                    <a class="btn btn-facebook btn-user btn-block">
+                                    <button class="btn btn-facebook btn-user btn-block">
                                         <i class="fab fa-facebook-f fa-fw"></i>
                                         Continuar com Facebook
-                                    </a>
+                                    </button>
 
                                 </form>
 
@@ -68,15 +71,15 @@
 
                                 <div class="text-center">
                                     <span class="small">É uma empresa? &nbsp;</span>
-                                    <a class="small" href="/company/login">Acesse aqui</a>
+                                    <a class="small a-link" href="/company/login">Acesse aqui</a>
                                 </div>
 
                                 <div class="text-center">
-                                    <a class="small" href="/consumer/forgot-password">Esqueci minha Senha</a>
+                                    <a class="small a-link" href="/consumer/forgot-password">Esqueci minha Senha</a>
                                 </div>
                                 
                                 <div class="text-center">
-                                    <a class="small" href="/consumer/register">Criar uma Conta</a>
+                                    <a class="small a-link" href="/consumer/register">Criar uma Conta</a>
                                 </div>
 
                             </div>

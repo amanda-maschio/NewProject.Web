@@ -1,274 +1,360 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container col-sm-12 px-4 px-lg-5 m-0">
-        <a class="navbar-brand" href="#!">Nome do Projeto</a>
-        
-        <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-        </button>
+<div class="hero_area">
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                <li class="nav-item"><a class="nav-link" aria-current="page" href="#!">Vender</a></li>
-                <li class="nav-item"><a class="nav-link" href="#!">Comprar</a></li>
-                <li class="nav-item c-pointer">
-                    <a class="nav-link" [matMenuTriggerFor]="menu">
-                        <span class="mr-2">Categorias</span>
-                        <i class="fa-solid fa-chevron-down down-icon"></i>
-                    </a>
-                    <mat-menu #menu="matMenu">
-                        <button mat-menu-item>Todos os Produtos</button>
-                        <mat-divider></mat-divider>
-                        <button mat-menu-item>Populares</button>
-                        <button mat-menu-item>Novidades</button>
-                    </mat-menu>
-                </li>
-            </ul>
+    <app-consumer-topbar currentPage="home"></app-consumer-topbar>
 
-            <form class="d-flex vertical-align">
-                <button class="btn vertical-align p-0" type="submit">
-                    <i class="fas fa-cart-shopping fa-fw"></i>
-                    <span class="badge badge-danger badge-counter">1</span>
-                </button>
-
-                <div class="topbar-divider d-none d-sm-block"></div>
-
-                <li dropdown class="nav-item dropdown no-arrow">
-                    <a class="nav-link dropdown-toggle p-0"
-                       [matMenuTriggerFor]="menuprofile"
-                       href
-                       id="basic-link"
-                       dropdownToggle
-                       (click)="false"
-                       aria-controls="basic-link-dropdown">
-                       <span class="mr-2 d-none d-lg-inline text-gray-600 small">John Doe</span>
-                       <img class="img-profile rounded-circle" src="../../../../assets/images/undraw_profile.svg">
-                    </a>
-                    <mat-menu #menuprofile="matMenu">
-                        <button mat-menu-item>Meus Dados</button>
-                        <button mat-menu-item>Minhas Compras</button>
-                        <mat-divider></mat-divider>
-                        <button mat-menu-item>Sair</button>
-                    </mat-menu>
-                </li>
-            </form>
+    <section class="slider_section ">
+        <div class="slider_bg_box">
+            <img src="../../../../assets/images/slider-bg.jpg" alt="">
         </div>
-    </div>
-</nav>
+        <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container ">
+                        <div class="row">
+                            <div class="col-md-7 col-lg-6 ">
+                                <div class="detail-box">
+                                    <h1>
+                                        <span> 20% Off </span>
+                                        <br>
+                                        Em Vestuário
+                                    </h1>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </p>
+                                    <div class="btn-box">
+                                        <a href="" class="btn1 br-10-rem">
+                                            Comprar Agora
+                                        </a>
+                                    </div>
+                                    <div class="m-10"></div>
 
-<header class="bg-dark py-5">
-    <div class="container px-4 px-lg-5 my-5">
-        <div class="text-center text-white">
-            <h1 class="display-4 fw-bolder">Shop in style</h1>
-            <p class="lead fw-normal text-white-50 mb-0">With this shop homepage template</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</header>
+    </section>
+</div>
 
-<section class="py-5">
-    <div class="container px-4 px-lg-5 mt-5">
-        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"/>
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <h5 class="fw-bolder">Fancy Product</h5>
-                            R$40.00 - R$80.00
-                        </div>
-                    </div>
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Ver Item</a></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <div class="badge badge-sell-item bg-dark text-white position-absolute"
-                         style="top: 0.5rem; right: 0.5rem">
-                         Usado
-                    </div>
-
-                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"/>
-
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <h5 class="fw-bolder">Special Item</h5>
-                            <div class="d-flex justify-content-center small text-warning mb-2">
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                            </div>
-                            <span class="text-muted text-decoration-line-through">R$20.00</span>
-                            R$18.00
-                        </div>
-                    </div>
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center">
-                            <a class="btn btn-outline-dark mt-auto" href="#">
-                                Adicionar ao carrinho
+<section class="product_section layout_padding">
+    <div class="container">
+        <div class="heading_container heading_center">
+            <h2>
+                <span>Produtos</span>
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="box">
+                    <div class="option_container">
+                        <div class="options">
+                            <a href="" class="option1">
+                                Adicionar ao Carrinho
+                            </a>
+                            <a href="" class="option2">
+                                Comprar Agora
                             </a>
                         </div>
                     </div>
+                    <div class="img-box">
+                        <img src="../../../../assets/images/Products/p1.png" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h5>
+                            Men's Shirt
+                        </h5>
+                        <h6>
+                            R$75
+                        </h6>
+                    </div>
                 </div>
             </div>
-
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <div class="badge badge-sell-item bg-dark text-white position-absolute"
-                         style="top: 0.5rem; right: 0.5rem">
-                         Usado
-                    </div>
-                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <h5 class="fw-bolder">Sell Item</h5>
-                            <span class="text-muted text-decoration-line-through">R$50.00</span>
-                            R$25.00
-                        </div>
-                    </div>
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center">
-                            <a class="btn btn-outline-dark mt-auto" href="#">
-                                Adicionar ao carrinho
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="box">
+                    <div class="option_container">
+                        <div class="options">
+                            <a href="" class="option1">
+                                Adicionar ao Carrinho
+                            </a>
+                            <a href="" class="option2">
+                                Comprar Agora
                             </a>
                         </div>
                     </div>
+                    <div class="img-box">
+                        <img src="../../../../assets/images/Products/p2.png" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h5>
+                            Men's Shirt
+                        </h5>
+                        <h6>
+                            R$80
+                        </h6>
+                    </div>
                 </div>
             </div>
-
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <h5 class="fw-bolder">Popular Item</h5>
-                            <div class="d-flex justify-content-center small text-warning mb-2">
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                            </div>
-                            R$40.00
-                        </div>
-                    </div>
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center">
-                            <a class="btn btn-outline-dark mt-auto" href="#">
-                                Adicionar ao carrinho
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="box">
+                    <div class="option_container">
+                        <div class="options">
+                            <a href="" class="option1">
+                                Adicionar ao Carrinho
+                            </a>
+                            <a href="" class="option2">
+                                Comprar Agora
                             </a>
                         </div>
                     </div>
+                    <div class="img-box">
+                        <img src="../../../../assets/images/Products/p3.png" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h5>
+                            Women's Dress
+                        </h5>
+                        <h6>
+                            R$68
+                        </h6>
+                    </div>
                 </div>
             </div>
-
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <div class="badge badge-sell-item bg-dark text-white position-absolute"
-                         style="top: 0.5rem; right: 0.5rem">
-                         Usado
-                    </div>
-                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <h5 class="fw-bolder">Sell Item</h5>
-                            <span class="text-muted text-decoration-line-through">R$50.00</span>
-                            R$25.00
-                        </div>
-                    </div>
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center">
-                            <a class="btn btn-outline-dark mt-auto" href="#">
-                                Adicionar ao carrinho
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="box">
+                    <div class="option_container">
+                        <div class="options">
+                            <a href="" class="option1">
+                                Adicionar ao Carrinho
+                            </a>
+                            <a href="" class="option2">
+                                Comprar Agora
                             </a>
                         </div>
                     </div>
+                    <div class="img-box">
+                        <img src="../../../../assets/images/Products/p4.png" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h5>
+                            Women's Dress
+                        </h5>
+                        <h6>
+                            R$70
+                        </h6>
+                    </div>
                 </div>
             </div>
-
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <h5 class="fw-bolder">Fancy Product</h5>
-                            R$120.00 - R$280.00
-                        </div>
-                    </div>
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center">
-                            <a class="btn btn-outline-dark mt-auto" href="#">
-                                Ver Item
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="box">
+                    <div class="option_container">
+                        <div class="options">
+                            <a href="" class="option1">
+                                Adicionar ao Carrinho
+                            </a>
+                            <a href="" class="option2">
+                                Comprar Agora
                             </a>
                         </div>
                     </div>
+                    <div class="img-box">
+                        <img src="../../../../assets/images/Products/p5.png" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h5>
+                            Women's Dress
+                        </h5>
+                        <h6>
+                            R$75
+                        </h6>
+                    </div>
                 </div>
             </div>
-
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <div class="badge badge-sell-item bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
-                        Usado
-                    </div>
-                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <h5 class="fw-bolder">Special Item</h5>
-                            <div class="d-flex justify-content-center small text-warning mb-2">
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                            </div>
-                            <span class="text-muted text-decoration-line-through">R$20.00</span>
-                            R$18.00
-                        </div>
-                    </div>
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center">
-                            <a class="btn btn-outline-dark mt-auto" href="#">
-                                Adicionar ao carrinho
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="box">
+                    <div class="option_container">
+                        <div class="options">
+                            <a href="" class="option1">
+                                Adicionar ao Carrinho
+                            </a>
+                            <a href="" class="option2">
+                                Comprar Agora
                             </a>
                         </div>
                     </div>
+                    <div class="img-box">
+                        <img src="../../../../assets/images/Products/p6.png" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h5>
+                            Women's Dress
+                        </h5>
+                        <h6>
+                            R$58
+                        </h6>
+                    </div>
                 </div>
             </div>
-
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"/>
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <h5 class="fw-bolder">Popular Item</h5>
-                            <div class="d-flex justify-content-center small text-warning mb-2">
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                            </div>
-                            R$40.00
-                        </div>
-                    </div>
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center">
-                            <a class="btn btn-outline-dark mt-auto" href="#">
-                                Adicionar ao carrinho
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="box">
+                    <div class="option_container">
+                        <div class="options">
+                            <a href="" class="option1">
+                                Adicionar ao Carrinho
+                            </a>
+                            <a href="" class="option2">
+                                Comprar Agora
                             </a>
                         </div>
                     </div>
+                    <div class="img-box">
+                        <img src="../../../../assets/images/Products/p7.png" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h5>
+                            Women's Dress
+                        </h5>
+                        <h6>
+                            R$80
+                        </h6>
+                    </div>
                 </div>
             </div>
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="box">
+                    <div class="option_container">
+                        <div class="options">
+                            <a href="" class="option1">
+                                Adicionar ao Carrinho
+                            </a>
+                            <a href="" class="option2">
+                                Comprar Agora
+                            </a>
+                        </div>
+                    </div>
+                    <div class="img-box">
+                        <img src="../../../../assets/images/Products/p8.png" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h5>
+                            Men's Shirt
+                        </h5>
+                        <h6>
+                            R$65
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="box">
+                    <div class="option_container">
+                        <div class="options">
+                            <a href="" class="option1">
+                                Adicionar ao Carrinho
+                            </a>
+                            <a href="" class="option2">
+                                Comprar Agora
+                            </a>
+                        </div>
+                    </div>
+                    <div class="img-box">
+                        <img src="../../../../assets/images/Products/p9.png" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h5>
+                            Men's Shirt
+                        </h5>
+                        <h6>
+                            R$65
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="box">
+                    <div class="option_container">
+                        <div class="options">
+                            <a href="" class="option1">
+                                Adicionar ao Carrinho
+                            </a>
+                            <a href="" class="option2">
+                                Comprar Agora
+                            </a>
+                        </div>
+                    </div>
+                    <div class="img-box">
+                        <img src="../../../../assets/images/Products/p10.png" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h5>
+                            Men's Shirt
+                        </h5>
+                        <h6>
+                            R$65
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="box">
+                    <div class="option_container">
+                        <div class="options">
+                            <a href="" class="option1">
+                                Adicionar ao Carrinho
+                            </a>
+                            <a href="" class="option2">
+                                Comprar Agora
+                            </a>
+                        </div>
+                    </div>
+                    <div class="img-box">
+                        <img src="../../../../assets/images/Products/p11.png" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h5>
+                            Men's Shirt
+                        </h5>
+                        <h6>
+                            R$65
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-4">
+                <div class="box">
+                    <div class="option_container">
+                        <div class="options">
+                            <a href="" class="option1">
+                                Adicionar ao Carrinho
+                            </a>
+                            <a href="" class="option2">
+                                Comprar Agora
+                            </a>
+                        </div>
+                    </div>
+                    <div class="img-box">
+                        <img src="../../../../assets/images/Products/p12.png" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h5>
+                            Women's Dress
+                        </h5>
+                        <h6>
+                            R$65
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-box">
+            <a href="" class="br-10-rem">
+                Ver Mais
+            </a>
         </div>
     </div>
 </section>
+
+<app-consumer-footer></app-consumer-footer>

@@ -35,11 +35,14 @@
                                                placeholder="Insira a senha">
                                     </div>
 
-                                    <button class="btn btn-primary btn-user btn-block" (click)="login()" [disabled]="loading">
-                                        <div class="d-flex" style="justify-content: center;align-content: center;">
-                                            <div class="spinner-grow spinner-grow-sm me-1" role="status" *ngIf="loading"></div>
-                                            <div>Entrar</div>
-                                        </div> 
+                                    <button class="btn btn-primary btn-user btn-block"
+                                            id="btn-login"
+                                            (click)="login()"
+                                            [disabled]="loading">
+                                            <div class="d-flex" style="justify-content: center;align-content: center;">
+                                                <div class="spinner-grow spinner-grow-sm me-1" role="status" *ngIf="loading"></div>
+                                                <div>Entrar</div>
+                                            </div> 
                                     </button>
 
                                     <div class="p-05"></div>
@@ -49,17 +52,17 @@
                                 <hr>
 
                                 <div class="text-center">
-                                    <a class="small" href="/company/forgot-password">Esqueci minha Senha</a>
+                                    <a class="small a-link" href="/company/forgot-password">Esqueci minha Senha</a>
                                 </div>
 
                                 <div class="text-center">
                                     <span class="small">É pessoa física? &nbsp;</span>
-                                    <a class="small" href="/consumer/login">Acesse aqui</a>
+                                    <a class="small a-link" href="/consumer/login">Acesse aqui</a>
                                 </div>
 
                                 <div class="text-center">
                                     <span class="small">Novo por aqui? &nbsp;</span>
-                                    <a class="small" href="./../../public/error/in-development">Solicitar Demonstração</a>
+                                    <a class="small a-link" href="./../../public/error/in-development">Solicitar Demonstração</a>
                                 </div>
 
                             </div>

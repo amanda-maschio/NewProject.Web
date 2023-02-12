@@ -1,31 +1,32 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { CollapseModule } from 'ngx-bootstrap/collapse';
-import { ModalModule } from 'ngx-bootstrap/modal';
 import { ConfirmModalComponent } from './confirm-modal/confirm-modal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxMaskModule } from 'ngx-mask'
 import { MaterialModule } from './material/material.module';
-
+import { BootstrapModule } from './ngx-bootstrap/bootstrap.module';
+import { TopbarComponent } from './consumer/topbar/topbar.component';
+import { FooterComponent } from './consumer/footer/footer.component';
 
 @NgModule({
   declarations: [
-    ConfirmModalComponent
+    ConfirmModalComponent,
+    TopbarComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
-    BsDropdownModule.forRoot(),
-    CollapseModule.forRoot(),
-    ModalModule.forRoot(),
     FormsModule,
     ReactiveFormsModule,
     NgxMaskModule.forRoot(),
-    MaterialModule
+    MaterialModule,
+    BootstrapModule
   ],
   exports: [
-    ConfirmModalComponent
+    ConfirmModalComponent,
+    TopbarComponent,
+    FooterComponent
   ],
-  bootstrap: [ConfirmModalComponent]
+  bootstrap: [ConfirmModalComponent, TopbarComponent, FooterComponent]
 })
 export class SharedModule { }

@@ -1,0 +1,69 @@
+<header class="header_section">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+            <span class="logo-title">
+                <a href="../../../consumer/home/">Marketplace</a>
+            </span>
+            <button class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item" id="home">
+                        <a class="nav-link" href="../../../consumer/home/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../../public/error/in-development/">Comprar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../../public/error/in-development/">Vender</a>
+                    </li>
+                    <li class="nav-item" id="about-us">
+                        <a class="nav-link" href="../../../public/about-us/">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../../public/about-us/">
+                            <i class="fa-solid fa-cart-shopping" title="Meu Carrinho"></i>
+                        </a>
+                    </li>
+
+                    <div class="topbar-divider d-none d-sm-block"></div>
+
+                    <li class="nav-item dropdown no-arrow">
+                        <a class="nav-link dropdown-toggle p-0 link-user-profile"
+                           [matMenuTriggerFor]="menuprofile"
+                           href
+                           id="basic-link"
+                           (click)="false"
+                           aria-controls="basic-link-dropdown">
+                           <span class="mr-2 d-none d-lg-inline small">{{user_name}}</span>
+                           <img class="img-profile rounded-circle" src="../../../../assets/images/default-profile-pic.png">
+                        </a>
+                        <mat-menu #menuprofile="matMenu">
+                            <button mat-menu-item class="vertical-align">
+                                <i class="fa-solid fa-user mr-2"></i>
+                                Meus Dados
+                            </button>
+                            <button mat-menu-item class="vertical-align">
+                                <i class="fa-solid fa-bag-shopping mr-2"></i>
+                                Minhas Compras
+                            </button>
+                            <mat-divider></mat-divider>
+                            <button mat-menu-item class="vertical-align" (click)="logout()">
+                                <i class="fa-solid fa-right-from-bracket mr-2"></i>
+                                Sair
+                            </button>
+                        </mat-menu>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>

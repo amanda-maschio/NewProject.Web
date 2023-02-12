@@ -22,11 +22,13 @@ import { InDevelopmentComponent } from './error/in-development/in-development.co
 import { InternalServerErrorComponent } from './error/internal-server-error/internal-server-error.component';
 import { NotFoundComponent } from './error/not-found/not-found.component';
 import { UnauthorizedComponent } from './error/unauthorized/unauthorized.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 import { LoginSettingsService } from './../../services/login-settings.service';
 import { LoginService } from './../../services/login.service';
 
 import localePt from '@angular/common/locales/pt';
+
 registerLocaleData(localePt, 'pt');
 
 @NgModule({
@@ -37,7 +39,8 @@ registerLocaleData(localePt, 'pt');
         InDevelopmentComponent,
         InternalServerErrorComponent,
         NotFoundComponent,
-        UnauthorizedComponent
+        UnauthorizedComponent,
+        AboutUsComponent
     ],
     imports: [
         CommonModule,

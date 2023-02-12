@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeConsumerComponent implements OnInit {
 
+  public user_full_name: string = '';
+  public user_picture_url: string = '';
+
   constructor() { }
 
   ngOnInit(): void {
+
+    this.user_full_name = localStorage.getItem('full_name');
+    this.user_picture_url = localStorage.getItem('picture_url');
+
   }
 
 }

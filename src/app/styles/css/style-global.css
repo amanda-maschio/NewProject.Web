@@ -37,9 +37,9 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --cor-produto: #0077b6;
-  --cor-btn-primary-produto: #5099dd;
-  --cor-placeholder-produto: #c9c9c9;
+  --primary-color: #f7444e;
+  --secondary-color: #002c3e;
+  --text-color: #1f1f1f;
   --font-family-sans-serif: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
@@ -12168,7 +12168,7 @@ form.user .btn-user {
 
 .btn-google {
   color: #fff;
-  background-color: #ea4335;
+  background-color: #188038;
   border-color: #fff;
 }
 
@@ -12740,4 +12740,14 @@ body.sidebar-toggled footer.sticky-footer {
   display: flex !important;
   align-items: center !important;
   height: 100% !important;
+}
+
+#btn-login,
+#btn-recover-password,
+#btn-create-account {
+  background-color: var(--primary-color);
+}
+
+.a-link {
+  color: var(--primary-color);
 }

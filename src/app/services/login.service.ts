@@ -33,4 +33,15 @@ export class LoginService {
         );
     }
 
+    logout(token: string) {
+        const creds = new HttpParams()
+            .set('_token', token)
+
+        return this.http.post<any>(
+            `${baseURL}/logout`,
+            creds.toString(),
+            this.headers
+        );
+    }
+
 }

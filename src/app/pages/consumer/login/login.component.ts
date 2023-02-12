@@ -58,8 +58,8 @@ export class LoginConsumerComponent implements OnInit {
 
       } else if (data.status == 200) {
 
-        //Save token to localstorage
-        this.loginSettingsService.setLogin(data._token);
+        //Save user data to localstorage
+        this.loginSettingsService.setLogin(data);
         this.messageHandler.showMessage("Logado com sucesso!", "success-snackbar");
         this.router.navigateByUrl('/consumer/home');
 
