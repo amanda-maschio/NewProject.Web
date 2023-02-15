@@ -69,7 +69,7 @@ export class RegisterConsumerComponent implements OnInit {
         this.messageHandler.showMessage(data.message, "danger-snackbar");
       } else if (data.status == 200) {
         //Save token to localstorage
-        this.loginSettingsService.setLogin(data.token);
+        this.loginSettingsService.setLogin(data);
         this.messageHandler.showMessage(data.message, "success-snackbar");
         this.router.navigateByUrl('/consumer/home');
       }

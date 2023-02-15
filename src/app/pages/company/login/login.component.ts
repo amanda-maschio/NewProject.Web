@@ -14,6 +14,7 @@ import { MessageHandlerService } from 'src/app/services/message-handler.service'
 export class LoginCompanyComponent implements OnInit {
 
   public loading: Boolean = false;
+  public hide: Boolean = true;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -71,5 +72,9 @@ export class LoginCompanyComponent implements OnInit {
       this.errorHandler.handleError(error);
       this.loading = false;
     });
+  }
+
+  public showHiddePassword(): void {
+    this.hide = !this.hide;
   }
 }

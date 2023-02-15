@@ -25,6 +25,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import localePt from '@angular/common/locales/pt';
 import { LoginSettingsService } from './../../services/login-settings.service';
 import { LoginService } from './../../services/login.service';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 registerLocaleData(localePt, 'pt');
 
@@ -34,7 +35,8 @@ registerLocaleData(localePt, 'pt');
         LoginConsumerComponent,
         RegisterConsumerComponent,
         HomeConsumerComponent,
-        ForgotPasswordComponent
+        ForgotPasswordComponent,
+        ShoppingCartComponent
     ],
     imports: [
         CommonModule,
